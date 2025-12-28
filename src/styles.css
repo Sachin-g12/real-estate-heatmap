@@ -1,0 +1,134 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.header {
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color: white;
+  padding: 18px;
+}
+
+.layout {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  padding: 16px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .active {
+  background: #2563eb;
+  color: white;
+}
+
+.map-area {
+  flex: 1;
+  position: relative;
+}
+
+.map {
+  height: 100%;
+}
+
+.stats {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.controller {
+  position: absolute;
+  left: 12px;
+  bottom: 80px;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+
+  /* 🔥 IMPORTANT FIX */
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.layer-info {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: white;
+  padding: 12px;
+  width: 260px;
+  border-radius: 6px;
+}
+/* =========================
+   DARK MODE OVERRIDES
+========================= */
+
+.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+/* Header */
+.dark .header {
+  background: linear-gradient(135deg, #020617, #020617);
+  color: #e5e7eb;
+}
+
+/* Sidebar */
+.dark .sidebar {
+  background: #020617;
+  border-right: 1px solid #1e293b;
+}
+
+.dark .sidebar button {
+  background: transparent;
+  color: #cbd5f5;
+}
+
+.dark .sidebar .active {
+  background: #2563eb;
+  color: white;
+}
+
+/* Panels */
+.dark .stats,
+.dark .controller,
+.dark .layer-info {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+}
+
+/* Buttons */
+.dark button {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* Slider */
+.dark input[type="range"] {
+  accent-color: #3b82f6;
+}
+.leaflet-container {
+  z-index: 0;
+}
+
+
+
